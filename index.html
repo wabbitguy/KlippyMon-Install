@@ -202,11 +202,13 @@
       }
     }
 
-    // One manifest per board/language: manifest_<board>_<language>.json
+    // One manifest per board/language: manifest_<board>_<language>.json.
+    // The ?t= makes the browser fetch it fresh: GitHub Pages lets browsers
+    // keep files for 10 minutes, which would hide an updated manifest.
     function updateManifest() {
       let name = 'manifest_' + board.value;
       if (language.options.length) name += '_' + language.value;
-      installBtn.setAttribute('manifest', name + '.json');
+      installBtn.setAttribute('manifest', name + '.json?t=' + Date.now());
     }
     board.addEventListener('change', updateManifest);
     language.addEventListener('change', updateManifest);
