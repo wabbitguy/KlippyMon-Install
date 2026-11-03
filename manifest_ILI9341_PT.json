@@ -1,9 +1,17 @@
 {
   "name": "KlippyMon",
-  "version": "v3.8",
+  "version": "v4.0",
   "new_install_prompt_erase": false,
   "new_install_improv_wait_time": 0,
   "builds": [
-    { "chipFamily": "ESP32", "parts": [ { "path": "KlippyMon_ILI9341_PT.bin", "offset": 0 } ] }
+    {
+      "chipFamily": "ESP32",
+      "parts": [
+        {
+          "path": "KlippyMon_ILI9341_PT.bin",
+          "offset": 0
+        }
+      ]
+    }
   ]
 }
